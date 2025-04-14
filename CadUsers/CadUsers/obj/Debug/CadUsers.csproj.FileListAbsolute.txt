@@ -1,0 +1,10 @@
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\bin\Debug\CadUsers.exe.config
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\bin\Debug\CadUsers.exe
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\bin\Debug\CadUsers.pdb
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.csproj.AssemblyReference.cache
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.Form1.resources
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.Properties.Resources.resources
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.csproj.GenerateResource.cache
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.csproj.CoreCompileInputs.cache
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.exe
+C:\Users\Alunos\source\repos\CadUsers\CadUsers\obj\Debug\CadUsers.pdb
