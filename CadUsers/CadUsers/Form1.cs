@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CadUsers
 {
@@ -32,9 +33,41 @@ namespace CadUsers
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPesquisa_Click(object sender, EventArgs e)
         {
-             
+            {
+                string termoPesquisa = txtPesquisa.Text.Trim();
+
+                if (string.IsNullOrEmpty(termoPesquisa))
+                {
+                    MessageBox.Show("Digite um nome para pesquisar.");
+                    return;
+                }
+
+                string conexaoString = "Data Source=EDUCADORES;Initial Catalog=Gabriel_BD;Integrated Security=True";
+                string query = "SELECT Nome, Telefone, CPF, Email FROM users3 WHERE Nome LIKE @Nome";
+
+                using (SqlConnection conexao = new SqlConnection(conexaoString))
+                {
+                    try
+                    {
+                        SqlCommand comando = new SqlCommand(query, conexao);
+                        comando.Parameters.AddWithValue("@Nome", "%" + termoPesquisa + "%");
+
+                        SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                        DataTable tabela = new DataTable();
+
+                        adaptador.Fill(tabela);
+                        dataGridView1.DataSource = tabela;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro: " + ex.Message);
+                    }
+                }
+
+            }
         }
     }
 }
+
